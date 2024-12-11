@@ -15,7 +15,7 @@ from .gst_hacks import map_gst_buffer  # noqa:F401,F402
 BITS_PER_BYTE = 8
 
 _ALL_VIDEO_FORMATS = [GstVideo.VideoFormat.from_string(
-    f.strip()) for f in GstVideo.VIDEO_FORMATS_ALL.strip('{ }').split(',')]
+    f.strip()) for f in GstVideo.VIDEO_FORMATS_ALL_STR.strip().split(',')]
 
 
 def has_flag(value: GstVideo.VideoFormatFlags,
